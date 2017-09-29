@@ -1,0 +1,16 @@
+{
+  "name": "uws-downloadmedia",
+  "version": "1.0.0",
+  "description": "Download media with context menu",
+  "scripts": {
+    "webext": "web-ext run --firefox=\"/c/Program Files/Firefox Developer Edition/firefox.exe\" --firefox-profile=\"/c/Users/Andy/AppData/Roaming/Mozilla/Firefox/Profiles/ppcytu75.dev-edition-default-1494324592236\""
+  },
+  "author": "Andy Willis",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.6.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-no-unsanitized": "^2.0.1"
+  }
+}
