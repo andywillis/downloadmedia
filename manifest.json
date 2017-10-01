@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "uws-downloadmedia",
-  "version": "1.0",
+  "name": "Download media",
+  "version": "1.2",
   "description": "Download media using the context menu",
   "icons": {
     "128": "icons/icon-128.png",
@@ -10,12 +10,19 @@
   },
   "background": {
     "scripts": [
-      "background/background.js"
+      "background/buildMenu.js",
+      "background/downloadMedia.js"
     ]
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/getMedia.js"]
+    }
+  ],
   "permissions": [
     "downloads",
-    "tabs",
+    "menus",
     "<all_urls>"
   ]
 }
