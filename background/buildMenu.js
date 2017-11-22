@@ -20,15 +20,34 @@
 
   browser.menus.create({
     id: 'pdf',
-    title: 'Download PDFs',
+    title: 'PDF',
     contexts: ['all'],
+    icons: {
+      16: 'pdf-16.pdf',
+      32: 'pdf-32.pdf'
+    },
     onclick: downloadMedia
   }, onCreated);
 
   browser.menus.create({
     id: 'jpg',
-    title: 'Download JPGs',
+    title: 'JPG',
     contexts: ['all'],
+    icons: {
+      16: 'jpg-16.pdf',
+      32: 'jpg-32.pdf'
+    },
+    onclick: downloadMedia
+  }, onCreated);
+
+  browser.menus.create({
+    id: 'mp3',
+    title: 'MP3',
+    contexts: ['all'],
+    icons: {
+      16: 'mp3-16.pdf',
+      32: 'mp3-32.pdf'
+    },
     onclick: downloadMedia
   }, onCreated);
 
