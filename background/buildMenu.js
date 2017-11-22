@@ -28,8 +28,8 @@
     title: 'PDF',
     contexts: ['all'],
     icons: {
-      16: 'icons/pdf-16.pdf',
-      32: 'icons/pdf-32.pdf'
+      16: 'icons/pdf-16.png',
+      32: 'icons/pdf-32.png'
     },
     onclick: downloadMedia
   }, onCreated);
@@ -39,8 +39,8 @@
     title: 'JPG',
     contexts: ['all'],
     icons: {
-      16: 'icons/jpg-16.pdf',
-      32: 'icons/jpg-32.pdf'
+      16: 'icons/jpg-16.png',
+      32: 'icons/jpg-32.png'
     },
     onclick: downloadMedia
   }, onCreated);
@@ -50,8 +50,8 @@
     title: 'MP3',
     contexts: ['all'],
     icons: {
-      16: 'icons/mp3-16.pdf',
-      32: 'icons/mp3-32.pdf'
+      16: 'icons/mp3-16.png',
+      32: 'icons/mp3-32.png'
     },
     onclick: downloadMedia
   }, onCreated);
