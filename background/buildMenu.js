@@ -1,7 +1,10 @@
-(function () {
+(function() {
 
   function getCurrentTab() {
-    return browser.tabs.query({ currentWindow: true, active: true });
+    return browser.tabs.query({
+      currentWindow: true,
+      active: true
+    });
   }
 
   function onCreated() {
@@ -13,8 +16,10 @@
   }
 
   function downloadMedia(menuInfo) {
-    getCurrentTab().then(function (tabInfo) {
-      browser.tabs.sendMessage(tabInfo[0].id, { type: menuInfo.menuItemId });
+    getCurrentTab().then(function(tabInfo) {
+      browser.tabs.sendMessage(tabInfo[0].id, {
+        type: menuInfo.menuItemId
+      });
     });
   }
 
@@ -23,8 +28,8 @@
     title: 'PDF',
     contexts: ['all'],
     icons: {
-      16: 'pdf-16.pdf',
-      32: 'pdf-32.pdf'
+      16: 'icons/pdf-16.pdf',
+      32: 'icons/pdf-32.pdf'
     },
     onclick: downloadMedia
   }, onCreated);
@@ -34,8 +39,8 @@
     title: 'JPG',
     contexts: ['all'],
     icons: {
-      16: 'jpg-16.pdf',
-      32: 'jpg-32.pdf'
+      16: 'icons/jpg-16.pdf',
+      32: 'icons/jpg-32.pdf'
     },
     onclick: downloadMedia
   }, onCreated);
@@ -45,8 +50,8 @@
     title: 'MP3',
     contexts: ['all'],
     icons: {
-      16: 'mp3-16.pdf',
-      32: 'mp3-32.pdf'
+      16: 'icons/mp3-16.pdf',
+      32: 'icons/mp3-32.pdf'
     },
     onclick: downloadMedia
   }, onCreated);
