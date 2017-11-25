@@ -1,3 +1,3 @@
-# uws-downloadmedia
+# downloadmedia
 
-An experiment to work out if the functionality of DTA can be replicated.
+A web extension that allows media to be downloaded from a webpage. Limited to MP3, JPG, and PDF.
