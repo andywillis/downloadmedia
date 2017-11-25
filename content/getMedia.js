@@ -4,9 +4,16 @@
     return context.querySelectorAll(selector);
   }
 
+  const illegal = /[%&{}<>*? $!"'\\;,^#|@]/g;
+
+  function fixURL(url) {
+    return url.replace(illegal, '-');
+  }
+
   function getMedia(type) {
     return [...qsa(`a[href$=".${type}"]`)].map((el) => {
-      return el.href;
+      console.log(fixURL(el.href))
+      return fixURL(el.href);
     });
   }
 
