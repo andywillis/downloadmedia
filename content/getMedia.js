@@ -12,7 +12,6 @@
 
   function getMedia(type) {
     return [...qsa(`a[href$=".${type}"]`)].map((el) => {
-      console.log(fixURL(el.href))
       return fixURL(el.href);
     });
   }
