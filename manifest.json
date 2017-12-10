@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Download media",
-  "version": "1.7",
+  "version": "1.8",
   "description": "Download media using the context menu",
   "icons": {
     "128": "icons/icon-128.png",
@@ -11,12 +11,15 @@
   "background": {
     "scripts": [
       "background/buildMenu.js",
-      "background/downloadMedia.js"
+      "background/downloadAllMedia.js"
     ]
   },
   "content_scripts": [{
     "matches": ["<all_urls>"],
-    "js": ["content/getMedia.js"]
+    "js": [
+      "content/getAllMedia.js",
+      "content/getKeyboard.js"
+    ]
   }],
   "permissions": [
     "downloads",

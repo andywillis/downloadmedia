@@ -18,7 +18,7 @@
     });
   }
 
-  function downloadMedia({ media }) {
+  function downloadAllMedia(media) {
     function stagger(downloadObjs) {
       downloadObjs.splice(0, 5).forEach((obj) => {
         browser.downloads.download(obj)
@@ -30,6 +30,20 @@
     stagger(compileDownloads(media));
   }
 
-  browser.runtime.onMessage.addListener(downloadMedia);
+  function downloadImage(url, filename) {
+    const props = { url, filename, conflictAction: 'uniquify' };
+    browser.downloads.download(props)
+      .then(handleDownload)
+      .catch(handleError);
+  }
+
+  function checkType(response) {
+    switch (response.type) {
+      case 'single': downloadImage(response.url, response.filename); break;
+      case 'all': downloadAllMedia(response.media); break;
+    }
+  }
+
+  browser.runtime.onMessage.addListener(checkType);
 
 }());

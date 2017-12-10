@@ -19,7 +19,7 @@
   function wrangleMedia(info) {
     const media = getMedia(info.type);
     if (media.length) {
-      browser.runtime.sendMessage({ media });
+      browser.runtime.sendMessage({ type: 'all', media });
     }
   }
 
