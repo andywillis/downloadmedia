@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
   function getCurrentTab() {
     return browser.tabs.query({
@@ -16,7 +16,7 @@
   }
 
   function downloadMedia(menuInfo) {
-    getCurrentTab().then(function(tabInfo) {
+    getCurrentTab().then(function (tabInfo) {
       browser.tabs.sendMessage(tabInfo[0].id, {
         type: menuInfo.menuItemId
       });
