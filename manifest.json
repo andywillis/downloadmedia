@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Download media",
-  "version": "1.8",
+  "version": "1.9",
   "description": "Download media using the context menu",
   "icons": {
     "128": "icons/icon-128.png",
