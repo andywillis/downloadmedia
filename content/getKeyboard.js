@@ -1,22 +1,22 @@
 (function () {
 
-  const illegal = /[%&{}<>*?/ $!"':\\;,^#|@]/g;
-  const mouse = { x: 0, y: 0 };
+  const { host } = new URL(window.location.href);
 
-  function processUrl(url) {
-    const filenameArr = url.split('/').pop().split('.');
-    const extension = filenameArr.pop().substr(0, 3);
-    const withIllegal = `${filenameArr.join('.')}.${extension}`;
-    const filename = withIllegal.replace(illegal, '-');
-    browser.runtime.sendMessage({ type: 'single', url, filename });
-  }
+  const mouse = { x: 0, y: 0 };
 
   function handleKeyup(e) {
     if (e.key === 'l') {
       const el = document.elementFromPoint(mouse.x, mouse.y);
       if (el.tagName === 'IMG') {
-        const url = el.parentNode.href;
-        processUrl(url);
+        const urlArray = [];
+        if (/.(jpg|gif|bmp|jpeg)/.test(el.parentNode.href)) {
+          urlArray.push(el.parentNode.href);
+        } else {
+          urlArray.push(el.src);
+        }
+        const data = { host, urlArray };
+        const msg = { trigger: 'downloadMedia', data };
+        browser.runtime.sendMessage(msg);
       }
     }
   }

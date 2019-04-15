@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="options.css"/>
+  <title>VFE settings</title>
+</head>
+
+<body>
+
+  <section>
+    <h2>Settings</h2>
+    <table>
+      <tr>
+        <td>Image download folder</td>
+        <td>downloads/<input data-value="imageFolder" /></td>
+      </tr>
+      <tr>
+        <td>Hash archive download folder</td>
+        <td>downloads/<input data-value="archiveFolder" /></td>
+      </tr>
+    </table>
+  </section>
+  
+  <section>
+    <h2>Hash Library</h2>
+    <table>
+      <tr><td>Hash count</td><td data-value="hashCount"></td></tr>
+    </table>
+    <section class="buttons">
+      <button data-action="import">Import library</button>
+      <button data-action="export">Export library</button>
+      <button class="clear" data-action="clear">Clear library</button>
+      <button class="yes" data-action="yes">Yes</button>
+      <button class="no" data-action="no">No</button>
+    </section>    
+  </section>
+
+  <script src="options.js"></script>
+
+</body>
+</html>

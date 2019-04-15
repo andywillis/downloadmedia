@@ -1,19 +1,22 @@
 {
-  "plugins": ["no-unsanitized"],
   "extends": ["plugin:no-unsanitized/DOM", "airbnb-base"],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 8,
     "sourceType": "module"
   },
+  "plugins": ["no-unsanitized"],
   "env": {
     "jest": true,
     "browser": true,
     "node": true
   },
   "globals": {
-    "browser": true
+    "browser": true,
+    "hosts": true,
+    "hashFnv32a": true
   },
   "rules": {
+    "no-lonely-if": 0,
     "no-underscore-dangle": 0,
     "no-plusplus": 0,
     "jsx-a11y/img-has-alt": 0,
@@ -24,6 +27,7 @@
     "no-console": 0,
     "comma-dangle": 0,
     "padded-blocks": 0,
+    "array-bracket-spacing": 0,
     "prefer-arrow-callback": 0,
     "arrow-body-style": 0,
     "no-shadow": 0,

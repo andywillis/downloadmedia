@@ -1,29 +1,42 @@
 {
   "manifest_version": 2,
   "name": "Download media",
-  "version": "1.9",
+  "version": "2.0.0",
   "description": "Download media using the context menu",
   "icons": {
     "128": "icons/icon-128.png",
     "64": "icons/icon-64.png",
     "48": "icons/icon-48.png"
   },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "downloadMedia@uws.com"
+    }
+  },
+  "browser_action": {
+    "default_icon": "icons/icon-16.png"
+  },
   "background": {
     "scripts": [
+      "shared/hosts.js",
       "background/buildMenu.js",
-      "background/downloadAllMedia.js"
+      "background/downloadMedia.js"
     ]
   },
   "content_scripts": [{
     "matches": ["<all_urls>"],
     "js": [
-      "content/getAllMedia.js",
+      "shared/hosts.js",
+      "content/getMedia.js",
       "content/getKeyboard.js"
     ]
   }],
   "permissions": [
+   "history",
     "downloads",
     "menus",
+    "storage",
+    "tabs",
     "<all_urls>"
-  ]
+   ]
 }
