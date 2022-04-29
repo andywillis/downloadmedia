@@ -1,6 +1,6 @@
 {
   "name": "downloadmedia",
-  "version": "1.9",
+  "version": "1.9.1",
   "description": "Download media with context menu",
   "scripts": {
     "webext": "web-ext run --firefox=\"/c/Program Files/Firefox Developer Edition/firefox.exe\" --firefox-profile=\"/c/Users/Andy/AppData/Roaming/Mozilla/Firefox/Profiles/ppcytu75.dev-edition-default-1494324592236\""
@@ -11,5 +11,8 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2"
+  },
+  "dependencies": {
+    "web-ext": "^6.8.0"
   }
 }
