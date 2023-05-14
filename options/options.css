@@ -1,0 +1,23 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: 0.5em 0.5em 0.5em 0;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  background-color: #abcddd;
+  font-size: 1.4em;
+  border-radius: 0.5em;
+}

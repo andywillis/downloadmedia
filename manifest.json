@@ -1,8 +1,11 @@
 {
   "manifest_version": 2,
   "name": "Download media",
-  "version": "1.9.1",
+  "version": "2.0.0",
   "description": "Download media using the context menu",
+  "options_ui": {
+    "page": "options/options.html"
+  },
   "icons": {
     "128": "icons/icon-128.png",
     "64": "icons/icon-64.png",
@@ -10,6 +13,7 @@
   },
   "background": {
     "scripts": [
+      "shared/config.js",
       "background/buildMenu.js",
       "background/downloadAllMedia.js"
     ]
@@ -24,6 +28,7 @@
   "permissions": [
     "downloads",
     "menus",
+    "storage",
     "<all_urls>"
   ]
 }
