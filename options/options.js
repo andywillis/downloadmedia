@@ -29,6 +29,7 @@
         conflictAction: 'overwrite'
       });
       browser.downloads.erase({ id });
+      message.classList.add('ok');
       message.textContent = 'Configuration exported';
     } catch (err) {
       console.error(err);
@@ -36,11 +37,17 @@
   }
 
   async function handleLoadConfig(e) {
-    const { result: data } = e.target;
-    const config = JSON.parse(data);
-    await browser.storage.local.set({ config });
-    message.textContent = 'Configuration imported';
-    browser.runtime.sendMessage({ action: 'rebuildMenu' });
+    try {
+      const { result: data } = e.target;
+      const config = JSON.parse(data);
+      await browser.storage.local.set({ config });
+      message.classList.add('ok');
+      message.textContent = 'Configuration imported';
+      browser.runtime.sendMessage({ action: 'rebuildMenu' });
+    } catch (err) {
+      message.classList.add('error');
+      message.textContent = 'Error importing configuration - file invalid';
+    }
   }
 
   function handleChange(e) {
@@ -62,6 +69,7 @@
 
   async function handleReset() {
     await browser.storage.local.set({ config });
+    message.classList.add('ok');
     message.textContent = 'Configuration reset';
     browser.runtime.sendMessage({ action: 'rebuildMenu' });
   }

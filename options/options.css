@@ -21,3 +21,8 @@ button {
   font-size: 1.4em;
   border-radius: 0.5em;
 }
+
+.message { margin-top: 1rem; font-size: 1.4rem ;}
+
+.ok { color: green; }
+.error { color: red; }

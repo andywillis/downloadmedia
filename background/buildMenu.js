@@ -39,10 +39,7 @@ async function buildMenu() {
       id,
       title,
       parentId,
-      icons = {
-        16: 'icons/gray-16.png',
-        32: 'icons/gray-32.png'
-      },
+      icons = undefined,
       extensions
     } = item;
 
