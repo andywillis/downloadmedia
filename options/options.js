@@ -61,8 +61,9 @@
   }
 
   async function handleReset() {
-    const defaultConfig = JSON.parse(config);
-    await browser.storage.local.set({ config: defaultConfig });
+    await browser.storage.local.set({ config });
+    message.textContent = 'Configuration reset';
+    browser.runtime.sendMessage({ action: 'rebuildMenu' });
   }
 
   function handleClick(e) {
