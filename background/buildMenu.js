@@ -1,59 +1,64 @@
-(function () {
+const documentUrlPatterns = ['<all_urls>'];
 
-  function getCurrentTab() {
-    return browser.tabs.query({
-      currentWindow: true,
-      active: true
-    });
+async function getConfig() {
+  const checkConfig = await browser.storage.local.get('config');
+  if (!Object.keys(checkConfig).length) {
+    await browser.storage.local.set({ config });
   }
+  return browser.storage.local.get('config');
+}
 
-  function onCreated() {
-    if (browser.runtime.lastError) {
-      console.log(`Error: ${browser.runtime.lastError}`);
-    } else {
-      console.log('Item created successfully');
-    }
+function getCurrentTab() {
+  return browser.tabs.query({
+    currentWindow: true,
+    active: true
+  });
+}
+
+function onCreated() {
+  if (browser.runtime.lastError) {
+    console.log(`Error: ${browser.runtime.lastError}`);
+  } else {
+    console.log('Item created successfully');
   }
+}
 
-  function downloadMedia(menuInfo) {
-    getCurrentTab().then(function (tabInfo) {
-      browser.tabs.sendMessage(tabInfo[0].id, {
-        type: menuInfo.menuItemId
-      });
-    });
-  }
+function downloadMedia({ extensions }) {
+  getCurrentTab().then(function (tabInfo) {
+    browser.tabs.sendMessage(tabInfo[0].id, { extensions });
+  });
+}
 
-  browser.menus.create({
-    id: 'pdf',
-    title: 'PDF',
-    contexts: ['all'],
-    icons: {
-      16: 'icons/pdf-16.png',
-      32: 'icons/pdf-32.png'
-    },
-    onclick: downloadMedia
-  }, onCreated);
+async function buildMenu() {
 
-  browser.menus.create({
-    id: 'jpg',
-    title: 'JPG',
-    contexts: ['all'],
-    icons: {
-      16: 'icons/jpg-16.png',
-      32: 'icons/jpg-32.png'
-    },
-    onclick: downloadMedia
-  }, onCreated);
+  await browser.menus.removeAll();
 
-  browser.menus.create({
-    id: 'mp3',
-    title: 'MP3',
-    contexts: ['all'],
-    icons: {
-      16: 'icons/mp3-16.png',
-      32: 'icons/mp3-32.png'
-    },
-    onclick: downloadMedia
-  }, onCreated);
+  (await getConfig()).config.forEach(item => {
 
-}());
+    const {
+      id,
+      title,
+      parentId,
+      icons = undefined,
+      extensions
+    } = item;
+
+    browser.menus.create({
+      id,
+      title,
+      parentId,
+      icons,
+      contexts: ['all'],
+      documentUrlPatterns,
+      onclick: () => downloadMedia({ extensions })
+    }, onCreated);
+
+  });
+
+}
+
+buildMenu();
+
+browser.runtime.onMessage.addListener(({ action }) => {
+  if (action === 'rebuildMenu') buildMenu();
+});

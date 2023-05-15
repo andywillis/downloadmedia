@@ -1,18 +1,22 @@
 {
   "name": "downloadmedia",
-  "version": "1.9.1",
+  "version": "2.0.0",
   "description": "Download media with context menu",
-  "scripts": {
-    "webext": "web-ext run --firefox=\"/c/Program Files/Firefox Developer Edition/firefox.exe\" --firefox-profile=\"/c/Users/Andy/AppData/Roaming/Mozilla/Firefox/Profiles/ppcytu75.dev-edition-default-1494324592236\""
-  },
+  "license": "CC-BY-NC-SA-4.0",
   "author": "Andy Willis",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.2"
+  "scripts": {
+    "sc": "cspell --config cspell.config.js",
+    "webext": "web-ext run --firefox=\"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\" -p=\"C:\\Users\\accou\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\uk9okw6h.Development\""
   },
-  "dependencies": {
-    "web-ext": "^6.8.0"
+  "devDependencies": {
+    "@babel/core": "7.21.5",
+    "@babel/eslint-parser": "7.21.3",
+    "@babel/plugin-syntax-import-assertions": "7.20.0",
+    "cross-env": "7.0.3",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-no-unsanitized": "^4.0.2",
+    "web-ext": "^7.6.2"
   }
 }
