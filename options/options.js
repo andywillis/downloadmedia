@@ -1,26 +1,24 @@
 (async function () {
 
-  const configurationFilename = 'downloadMedia.config';
+  const configurationFilename = 'downloadmedia.config';
 
   const buttons = document.querySelector('.buttons');
-  const message = document.querySelector('.message');
+  const messageContainer = document.querySelector('.messageContainer');  
+  const message = document.querySelector('.message');  
+  const yesNo = document.querySelector('.yesno');
 
-  message.addEventListener('click', handleYesNo);
-
-  const yesNo = `
-    Are you sure?
-    <button data-check="yes" class="check yes">Yes</button>
-    <button data-check="no" class="check no">No</button>
-  `;
+  messageContainer.addEventListener('click', handleYesNo);
 
   function handleYesNo(e) {
     if (e.target.matches('.check')) {
       if (e.target.dataset.check === 'yes') {
         resetConfig();
+        yesNo.classList.remove('show');
         message.classList.remove('error');
         message.classList.add('ok');
         message.textContent = 'Configuration reset';
       } else {
+        yesNo.classList.remove('show');
         message.classList.remove('error');
         message.classList.add('ok');
         message.textContent = 'Reset cancelled';
@@ -104,7 +102,9 @@
   }
 
   function handleReset() {
-    message.innerHTML = yesNo;
+    message.textContent = 'Are you sure?';
+    console.log(yesNo)
+    yesNo.classList.add('show');
   }
 
   function handleClick(e) {

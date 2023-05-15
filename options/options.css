@@ -42,16 +42,17 @@ button.check {
 
 .yes { background-color: #aaffaa;}
 .no { background-color: #ffaaaa; }
-
 .yes:hover { background-color: #77aa77; }
 .no:hover { background-color: #aa7777; }
 
-.message {
+.messageContainer {
   height: 22px;
   padding: 16px;
   margin-top: 1rem;
   font-size: 1.4rem;
 }
 
+.yesno { display: none; }
 .ok { color: green; }
 .error { color: red; }
+.show { display: inline; }
