@@ -119,7 +119,7 @@ const config = [
   {
     id: 'jpg',
     level: 2,
-    title: 'JPEG',
+    title: 'JPG',
     parentId: 'image',
     extensions: '.jpg|.jpeg',
     icons: {

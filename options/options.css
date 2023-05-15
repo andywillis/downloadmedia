@@ -12,17 +12,46 @@ main {
   align-items: center;
 }
 
-button {
+.buttons legend { font-size: 1.4em; }
+
+button.main {
   margin: 0.5em 0.5em 0.5em 0;
   width: 140px;
-  height: 40px;
+  padding: 0.5rem;
   text-align: center;
   background-color: #abcddd;
   font-size: 1.4em;
   border-radius: 0.5em;
 }
 
-.message { margin-top: 1rem; font-size: 1.4rem ;}
+button.main:hover {
+  cursor: pointer;
+  background-color: #799aaa;
+}
+
+button.check {
+  width: 40px;
+  font-size: inherit;
+  text-align: center;
+  padding: 4px;
+  margin: 0;
+  border: none;
+}
+
+.check:hover { cursor: pointer; }
+
+.yes { background-color: #aaffaa;}
+.no { background-color: #ffaaaa; }
+
+.yes:hover { background-color: #77aa77; }
+.no:hover { background-color: #aa7777; }
+
+.message {
+  height: 22px;
+  padding: 16px;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
 
 .ok { color: green; }
 .error { color: red; }

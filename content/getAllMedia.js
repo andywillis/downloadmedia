@@ -27,7 +27,7 @@
 
     const selector = extensions
       .split('|')
-      .map(type => `a[href*=".${type}"]`)
+      .map(type => `a[href*="${type}"]`)
       .join(', ');
 
     return [...document.querySelectorAll(selector)].map(({ href }) => {

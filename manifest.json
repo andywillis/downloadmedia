@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Download media 2",
-  "version": "0.0.1",
+  "name": "Download media",
+  "version": "2.0.0",
   "description": "Download media using the context menu",
   "options_ui": {
     "page": "options/options.html"
