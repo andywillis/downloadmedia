@@ -38,7 +38,7 @@ async function buildMenu() {
     const {
       id,
       title,
-      parentId,
+      parentId = undefined,
       icons = undefined,
       extensions
     } = item;

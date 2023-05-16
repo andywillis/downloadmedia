@@ -1,138 +1,35 @@
 [
     {
-        "id": "audio",
-        "level": 1,
-        "title": "Audio",
-        "icons":
-        {
-            "16": "icons/red-16.png",
-            "32": "icons/red-32.png"
-        }
-    },
-    {
-        "id": "document",
-        "level": 1,
-        "title": "Document",
-        "icons":
-        {
-            "16": "icons/blue-16.png",
-            "32": "icons/blue-32.png"
-        }
-    },
-    {
-        "id": "image",
-        "level": 1,
-        "title": "Image",
-        "icons":
-        {
-            "16": "icons/green-16.png",
-            "32": "icons/green-32.png"
-        }
-    },
-    {
-        "id": "video",
-        "level": 1,
-        "title": "Video",
-        "icons":
-        {
-            "16": "icons/gray-16.png",
-            "32": "icons/gray-32.png"
-        }
-    },
-    {
-        "id": "mp3",
-        "level": 2,
-        "title": "MP3",
-        "parentId": "audio",
-        "extensions": ".mp3",
-        "icons":
-        {
-            "16": "icons/red-16.png",
-            "32": "icons/red-32.png"
-        }
-    },
-    {
         "id": "pdf",
-        "level": 2,
+        "level": 1,
         "title": "PDF",
-        "parentId": "document",
         "extensions": ".pdf",
         "icons":
         {
-            "16": "icons/blue-16.png",
-            "32": "icons/blue-32.png"
-        }
-    },
-    {
-        "id": "txt",
-        "level": 2,
-        "title": "TXT",
-        "parentId": "document",
-        "extensions": ".txt",
-        "icons":
-        {
-            "16": "icons/blue-16.png",
-            "32": "icons/blue-32.png"
-        }
-    },
-    {
-        "id": "gif",
-        "level": 2,
-        "title": "GIF",
-        "parentId": "image",
-        "extensions": ".gif",
-        "icons":
-        {
-            "16": "icons/green-16.png",
-            "32": "icons/green-32.png"
+            "16": "icons/red-16.png",
+            "32": "icons/red-32.png"
         }
     },
     {
         "id": "jpg",
-        "level": 2,
+        "level": 1,
         "title": "JPG",
-        "parentId": "image",
         "extensions": ".jpg|.jpeg",
         "icons":
         {
-            "16": "icons/green-16.png",
-            "32": "icons/green-32.png"
+            "16": "icons/blue-16.png",
+            "32": "icons/blue-32.png"
         }
     },
     {
-        "id": "png",
-        "level": 2,
-        "title": "PNG",
-        "parentId": "image",
-        "extensions": ".png",
+        "id": "mp3",
+        "level": 1,
+        "title": "MP3",
+        "extensions": ".mp3",
         "icons":
         {
             "16": "icons/green-16.png",
             "32": "icons/green-32.png"
-        }
-    },
-    {
-        "id": "mp4",
-        "level": 2,
-        "title": "MP4",
-        "parentId": "video",
-        "extensions": ".mp4",
-        "icons":
-        {
-            "16": "icons/gray-16.png",
-            "32": "icons/gray-32.png"
-        }
-    },
-    {
-        "id": "mpg",
-        "level": 2,
-        "title": "MPG",
-        "parentId": "video",
-        "extensions": ".mpg",
-        "icons":
-        {
-            "16": "icons/gray-16.png",
-            "32": "icons/gray-32.png"
         }
     }
 ]

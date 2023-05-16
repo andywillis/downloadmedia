@@ -6,7 +6,9 @@
   "author": "Andy Willis",
   "scripts": {
     "sc": "cspell --config cspell.config.js",
-    "webext": "web-ext run --firefox=\"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\" -p=\"C:\\Users\\accou\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\uk9okw6h.Development\""
+    "dev": "web-ext run --firefox=\"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\" -p=\"C:\\Users\\accou\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\uk9okw6h.Development\"",
+    "build": "web-ext build --overwrite-dest",
+    "lint": "web-ext lint"
   },
   "devDependencies": {
     "@babel/core": "7.21.5",
