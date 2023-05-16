@@ -25,7 +25,7 @@ The configuration file is a JSON file that contains the information to build the
 - `id`: A unique identifier for the menu item (required)
 - `level`: what level the menu is (required)
 - `title`: The text that appears in the menu item (required)
-- `extensions`: A list of extensions associated with that menu item. Each extension is separated by a pipe (`|`) operator (required only on those menu items responsible for downloading files).
+- `extensions`: A list of extensions associated with that menu item. Each extension is preceded by a period/full-stop, and separated by a pipe (`|`) operator (required only on those menu items responsible for downloading files).
 - `parentId`: used to link a child menu item to its parent `id` (required only on sub-menu items that need to link to a parent `id`).
 - `icons`: Adds an icon set (available in six colours: red, yellow, green, purple, blue, and gray) to the menu item.
 
