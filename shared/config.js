@@ -1,4 +1,4 @@
-// Icons from <a href="https://www.flaticon.com/free-icons/jpg" title="jpg icons">Jpg icons created by Dimitry Miroliubov - Flaticon</a>
+// Modified icons from <a href="https://www.flaticon.com/free-icons/jpg" title="jpg icons">Jpg icons created by Dimitry Miroliubov - Flaticon</a>
 
 // There are six sets of icons.
 // Each icon set has both a 16 pixel and a 32 pixel PNG image,
