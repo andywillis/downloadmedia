@@ -16,7 +16,7 @@ This extension has two key features.
 
 New in release 2.0.0 is the option to amend the menu configuration file to better suit users' individual needs.
 
-The configuration file can be imported/exported/reset from the extension options menu.
+The configuration file can be imported/exported/reset from the extension options menu. A cursory knowledge of JSON is required.
 
 ![Screenshot of menu](https://github.com/andywillis/downloadmedia/blob/main/documentation/screenshot2.png)
 
@@ -41,9 +41,13 @@ The configuration file is a JSON file that contains the information to build the
 
 Import a configuration JSON file. The import procedure does some basic error checking and warns if there's a problem.
 
+Note 1: you can use a site like [json.parser.online.fr/](json.parser.online.fr/) to test that the updated configuration parses properly.
+
+Note 2: if the updated configuration doesn't work you can reset to the default configuration. 
+
 ### Export
 
-Export the current configuration file to a location of the users' choosing.
+Export the current configuration file to a location of the users' choosing as JSON.
 
 ### Reset
 
