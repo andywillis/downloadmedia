@@ -35,7 +35,7 @@ The configuration file is a JSON file that contains the information to build the
 
 [Here is an example of how the configuration in version 1.0.0 looked](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/version1.json). This is just one level
 
-[Here is an example of a one-level "grouped" menu](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/version1.json). Here clicking on any of the menu items downloads _all_ of the associated file types.
+[Here is an example of a one-level "grouped" menu](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/grouped.json). Here clicking on any of the menu items downloads _all_ of the associated file types.
 
 ### Import
 
