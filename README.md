@@ -6,18 +6,8 @@ A web extension that allows media to be batch-downloaded from a web page.
 
 1) Right click to display the context menu. The default menu displays a default configuration:
 
-- Audio
-  - MP3
-- Documents
-  - PDF
-  - TXT
-- Image
-  - GIF
-  - JPG/JPEG
-  - PNG
-- Video
-  - MP4
-  - MPG
+
+
 
 2) Users can download the configuration file, amend it, and upload it to the extension to modify their menus.
 
