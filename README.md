@@ -22,17 +22,20 @@ The configuration file can be imported/exported/reset from the extension options
 
 The configuration file is a JSON file that contains the information to build the menu.
 
-[Here is the default configuration](https://github.com/andywillis/downloadmedia/blob/main/shared/config.js).
-
-At its most basic a menu item is `id`, `level`, `title`.
-
-For sub-menu items (those that are at "level 2" a `parentId` is also necessary to link to the `id` of the object of which it's a child).
-
-`icons` can also be added from a set of six different colours.
+- `id`: A unique identifier for the menu item (required)
+- `level`: what level the menu is (required)
+- `title`: The text that appears in the menu item (required)
+- `extensions`: A list of extensions associated with that menu item. Each extension is separated by a pipe (`|`) operator (required only on those menu items responsible for downloading files).
+- `parentId`: used to link a child menu item to its parent `id` (required only on sub-menu items that need to link to a parent `id`).
+- `icons`: Adds an icon set (available in six colours: red, yellow, green, purple, blue, and gray) to the menu item.
 
 ### Examples of configuration files
 
-[Default]()
+[Here is the default configuration](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/default.json). There are two levels of menu. The first to define "Audio", "Document", "Image", and "Video", and a second level that specifies individual _types_ of media linked back to the parent by the `parentId` property.
+
+[Here is an example of how the configuration in version 1.0.0 looked](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/version1.json). This is just one level
+
+[Here is an example of a one-level "grouped" menu](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/version1.json). Here clicking on any of the menu items downloads _all_ of the associated file types.
 
 ### Import
 
