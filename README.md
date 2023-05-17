@@ -31,9 +31,9 @@ The configuration file is a JSON file that contains the information to build the
 
 ### Examples of configuration files
 
-[Here is the default configuration](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/default.json). There are two levels of menu. The first to define "Audio", "Document", "Image", and "Video", and a second level that specifies individual _types_ of media linked back to the parent by the `parentId` property.
+[Here is an example of how the configuration in version 1.0.0 looked and the default configuration for this new release](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/version1.json). This is just one level of menu.
 
-[Here is an example of how the configuration in version 1.0.0 looked](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/version1.json). This is just one level
+[Here is an example of a "full" configuration](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/default.json). There are two levels of menu. The first to define "Audio", "Document", "Image", and "Video", and a second level that specifies individual _types_ of media linked back to the parent by the `parentId` property.
 
 [Here is an example of a one-level "grouped" menu](https://github.com/andywillis/downloadmedia/blob/main/documentation/configuration-examples/grouped.json). Here clicking on any of the menu items downloads _all_ of the associated file types.
 
