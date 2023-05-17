@@ -1,4 +1,4 @@
-# downloadmedia
+# Download Media
 
 A web extension that allows media to be batch-downloaded from a web page.
 
