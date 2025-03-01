@@ -3,5 +3,10 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"typescript.format.enable": true,
+		"typescript.validate.enable": true,
+		"javascript.validate.enable": false
+	}
 }

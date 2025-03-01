@@ -3,11 +3,17 @@
   const configurationFilename = 'downloadmedia.config';
 
   const buttons = document.querySelector('.buttons');
-  const messageContainer = document.querySelector('.messageContainer');  
-  const message = document.querySelector('.message');  
+  const messageContainer = document.querySelector('.messageContainer');
+  const message = document.querySelector('.message');
   const yesNo = document.querySelector('.yesno');
 
-  messageContainer.addEventListener('click', handleYesNo);
+  async function resetConfig() {
+    await browser.storage.local.set({ config });
+    message.classList.remove('error');
+    message.classList.add('ok');
+    message.textContent = 'Configuration reset';
+    browser.runtime.sendMessage({ action: 'rebuildMenu' });
+  }
 
   function handleYesNo(e) {
     if (e.target.matches('.check')) {
@@ -25,6 +31,8 @@
       }
     }
   }
+
+  messageContainer.addEventListener('click', handleYesNo);
 
   function pad(str) {
     return str.toString().length === 1 ? `0${str}` : str;
@@ -93,17 +101,9 @@
     input.addEventListener('change', handleChange, false);
   }
 
-  async function resetConfig() {
-    await browser.storage.local.set({ config });
-    message.classList.remove('error');
-    message.classList.add('ok');
-    message.textContent = 'Configuration reset';
-    browser.runtime.sendMessage({ action: 'rebuildMenu' });
-  }
-
   function handleReset() {
     message.textContent = 'Are you sure?';
-    console.log(yesNo)
+    console.log(yesNo);
     yesNo.classList.add('show');
   }
 

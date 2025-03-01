@@ -1,6 +1,11 @@
 # Change Log
 
-## 2.0.0 (2023-05-14)
+## 2.1.0 (2025-03)
+
+- Fixed import issue
+- Added async/batch downloading
+
+## 2.0.0 (2023-05)
 
 First major upgrade with improvements to the context menu, and download management.
 
